@@ -28,3 +28,9 @@ VALUES
     
 SELECT * FROM Users ;
 SELECT * FROM Transactions ;
+
+
+/* 
+  zdi database theke ager sign in fo delete korte cai taile prothome transaction table drop kore user table drop korte hbe hbeee
+  update korte parbo update command diye
+*/
