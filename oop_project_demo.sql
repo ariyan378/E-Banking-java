@@ -7,7 +7,7 @@ CREATE TABLE Users (
     password VARCHAR(100) NOT NULL,
     balance DECIMAL(10,2) DEFAULT 0.0
 );
-
+DROP TABLE Users ;
 CREATE TABLE Transactions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     sender_phone VARCHAR(20),
@@ -17,7 +17,7 @@ CREATE TABLE Transactions (
     FOREIGN KEY (sender_phone) REFERENCES Users(phone_number),
     FOREIGN KEY (receiver_phone) REFERENCES Users(phone_number)
 );
-
+DROP TABLE Transactions ;
 INSERT INTO Users (phone_number, name, password, balance)
 VALUES 
     ('1111111111', 'Ariyan', 'ariyanpass', 1000.00),
@@ -25,10 +25,16 @@ VALUES
     ('3333333333', 'Shisita', 'shisitapass', 2000.00),
     ('4444444444', 'Tasfin', 'tasfinpass', 1200.00),
     ('5555555555', 'Dishad', 'dishadpass', 800.00);
-    
+
+DELETE FROM Users
+WHERE phone_number = '01645878654'; 
+
+UPDATE Users
+SET password = NULL, balance = NULL
+WHERE phone_number = '2222222222';
+
 SELECT * FROM Users ;
 SELECT * FROM Transactions ;
-
 
 /* 
   zdi database theke ager sign in fo delete korte cai taile prothome transaction table drop kore user table drop korte hbe hbeee
